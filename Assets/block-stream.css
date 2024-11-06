@@ -1,16 +1,19 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: white;
     font-family: 'poppins', sans-serif;
 }
-.body{
+
+.body {
     background-color: #131313;
 }
-.navbar{
-    background: linear-gradient(to right, #131313,rgb(37, 61, 37),rgb(13, 13, 55));
+
+.navbar {
+    background: linear-gradient(to right, #131313, rgb(37, 61, 37), rgb(13, 13, 55));
 }
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
@@ -20,15 +23,15 @@
 }
 
 .nav-link:hover {
-    background: linear-gradient(to right, #6e37d4,#5EB4FD);
+    background: linear-gradient(to right, #6e37d4, #5EB4FD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Underline effect on hover */
 .nav-link {
-    position: relative; 
-    text-decoration: none; 
+    position: relative;
+    text-decoration: none;
 }
 
 .nav-link::after {
@@ -38,74 +41,113 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(to right, #6e37d4, #5EB4FD); /* Gradient color for the line */
-    transition: width 0.3s ease; /* Smooth transition for line expansion */
+    background: linear-gradient(to right, #6e37d4, #5EB4FD);
+    /* Gradient color for the line */
+    transition: width 0.3s ease;
+    /* Smooth transition for line expansion */
 }
 
 .nav-link:hover::after {
-    width: 100%; /* Expand line width on hover */
+    width: 100%;
+    /* Expand line width on hover */
 }
-.join-now-btn {
+
+.join-now {
+    display: inline-block;
+    padding: 3px;
+    background: linear-gradient(#6e37d4, #5EB4FD);
+    border-radius: 15px;
+}
+
+.join-now .join-now-btn {
     padding: 10px 20px;
-    border-radius: 10px !important; /* Force application */
-    font-weight: bold;
-    z-index: 1;
-    background-color: transparent; /* Background color */
-    border: 2px solid; /* Define a border */
-    border-image: linear-gradient(to right, #7039d6, #5EB4FD) 1; /* Gradient border */
+    font-size: 16px;
+    color: #fff;
+    background-color: #131313;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
 }
-
-
-
 
 /* row 1 css start */
-.row-1{
-    background: linear-gradient(to right,  #131313,rgb(37, 61, 37), #2C596D 50%, rgba(44, 89, 109, 0) 100%);
+.row-1 {
+    background: linear-gradient(to right, #131313, rgb(37, 61, 37), #2C596D 50%, rgba(44, 89, 109, 0) 100%);
 }
 
 .blank-div {
-        background: radial-gradient(circle, #30444d 30%, rgb(37, 61, 37) 60%, rgba(37, 61, 37, 0) 100%);
-}
-@media screen and (max-width:425px){
-    .blank-div{
-        height: 40vh;
-        width: 100%;
-    }
+    background-image: url('/Assets/images/Blockstream1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
 }
 
-.explore-future{
-    background: radial-gradient(circle, rgb(52, 86, 52) 10%,rgb(37, 61, 37)30%, rgba(37, 61, 37, 0) 100% );
+
+.explore-future {
+    background: radial-gradient(circle, rgb(52, 86, 52) 10%, rgb(37, 61, 37)30%, rgba(37, 61, 37, 0) 100%);
 }
 
-.headline{
+.headline {
     background-image: linear-gradient(to right, #8A48F8, #7676F2, #679FFD, #52CFFE);
-    -webkit-background-clip: text; /* For Safari */
-    background-clip: text; /* Standard */
-    color: transparent; /* Make the text color transparent */
+    -webkit-background-clip: text;
+    /* For Safari */
+    background-clip: text;
+    /* Standard */
+    color: transparent;
+    /* Make the text color transparent */
 }
-.get-start-btn{
+
+.get-start-btn {
     border-radius: 20px;
-    background: linear-gradient(to right, #8A48F8,#7676F2,#52CFFE);
+    background: linear-gradient(to right, #8A48F8, #7676F2, #52CFFE);
 }
 
 .explore-now-btn{
-    border: 2px solid;
-    border-image: linear-gradient(to right, #7039d6, #5EB4FD) 1;
+    font-size: 15px;
+    place-items: center;
+    border: 8px solid;
+    color: white;
+    padding: 3px 5px;
+    position: relative;
+    background:transparent;
+    background-clip: padding-box;
+    border-radius: 25px;
+
 }
-@media screen and (max-width:370px){
-    .get-start-btn, .explore-now-btn {
+
+.explore-now-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -8px;
+    border-radius: inherit;
+    border-image: linear-gradient(to right, turquoise, greenyellow) !important;
+}
+
+
+
+@media screen and (max-width:370px) {
+
+    .get-start-btn,
+    .explore-now-outer .explore-now-btn {
         font-size: 10px;
     }
 }
 
-.circle-div{
+.circle-div1 {
     height: 30px;
     width: 30px;
     border: 1px solid #1D2C38;
     background-color: #C4C4C4;
     border-radius: 50%;
 }
-.circle-div2{
+
+.circle-div2 {
     height: 30px;
     width: 30px;
     border: 1px solid #1D2C38;
@@ -114,7 +156,8 @@
     position: relative;
     left: -10px;
 }
-.circle-div3{
+
+.circle-div3 {
     height: 30px;
     width: 30px;
     border: 1px solid #1D2C38;
@@ -123,7 +166,8 @@
     position: relative;
     left: -20px;
 }
-.circle-div4{
+
+.circle-div4 {
     height: 30px;
     width: 30px;
     border: 1px solid #1D2C38;
@@ -136,49 +180,61 @@
 /* row 1 css end */
 
 /* row-3 css start */
-.row-comon-color{
-    background: linear-gradient(to right,  #2e483a,rgb(37, 61, 37), #2C596D 50%, rgba(54, 99, 67, 0) 100%);
+.row-comon-color {
+    background: linear-gradient(to right, #2e483a, rgb(37, 61, 37), #2C596D 50%, rgba(54, 99, 67, 0) 100%);
 }
-.card{
+
+.card {
     background: transparent;
     border: 2px solid;
     border-image: linear-gradient(to right, #7039d6, #5EB4FD) 1;
-    border-radius: 10px !important;
 }
+
 /* row-3 css end */
 
 
 /* Who We Are Innovators row css start */
-.read-more-btn{
+.read-more-btn {
     border: 2px solid;
     border-radius: 20px;
     border-image: linear-gradient(to right, #7039d6, #5EB4FD) 1;
-    }
+}
 
-@media screen and (max-width:425px){
-    .Innovators-blank-div{
+@media screen and (max-width:425px) {
+    .Innovators-blank-div {
         height: 30vh;
     }
 }
+
+.Innovators-blank-div {
+    background-image: url('/Assets/images/Blockstream1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+}
+
 /* Who We Are Innovators row css end */
 
 /* What Our Users Are Saying row css start */
 
-.carousel{
+.carousel {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
-@media screen and (max-width:768px){
-    .carousel{
+
+@media screen and (max-width:768px) {
+    .carousel {
         width: 75%;
     }
 }
-@media screen and (max-width:425px){
-    .carousel{
+
+@media screen and (max-width:425px) {
+    .carousel {
         width: 100%;
-        }
+    }
 
 }
 
@@ -192,7 +248,8 @@
     position: relative;
     left: -80px;
 }
-.custom-arrow-right i{
+
+.custom-arrow-right i {
     font-size: 30px;
     font-weight: bolder;
     border: 2px solid;
@@ -202,54 +259,66 @@
     position: relative;
     left: 80px;
 }
+
 /* media querry for arrows */
 
-@media screen and (min-width:320px) and (max-width:480px){
-    .custom-arrow-left i{
+@media screen and (min-width:320px) and (max-width:480px) {
+    .custom-arrow-left i {
         position: relative;
         left: 200px;
         bottom: 270px;
     }
-    .custom-arrow-right i{
+
+    .custom-arrow-right i {
         left: -20px;
         bottom: 270px;
     }
 }
-.carousel-item{
+
+.carousel-item {
     border: 2px solid;
     border-radius: 20px;
     border-image: linear-gradient(to right, #7039d6, #5EB4FD) 1;
 }
-.quote-icon{
+
+.quote-icon {
     font-size: 80px;
     position: relative;
     right: 0px;
     left: 90%;
-    top:-30px;
+    top: -30px;
     background-image: linear-gradient(to right, #8A48F8, #7676F2, #679FFD, #52CFFE);
-    -webkit-background-clip: text; /* For Safari */
-    background-clip: text; /* Standard */
-    color: transparent; /* Make the text color transparent */
-    
+    -webkit-background-clip: text;
+    /* For Safari */
+    background-clip: text;
+    /* Standard */
+    color: transparent;
+    /* Make the text color transparent */
+
 }
-.user-profile{
+
+.user-profile {
     border: 2px solid rgb(172, 160, 160);
     border-radius: 50%;
     padding: 5px;
     height: 50px;
     width: 50px;
 }
+
 /* What Our Users Are Saying row css start */
 
 /* start today card css start */
-.start-today-card{
-background: linear-gradient(to right, #7039d6, #5EB4FD);
-border-radius: 10px;
+.start-today-card {
+    background: linear-gradient(to right, #7039d6, #5EB4FD);
+    border-radius: 10px;
 }
 
-.get-start-now-btn{
+.get-start-now-btn {
     border-radius: 20px;
 }
+
 /* start today card css end */
+
+
 
 
